@@ -94,6 +94,133 @@
                 border-color: #444;
             }
 
+            /* Terminal */
+
+            .terminal {
+                display: inline-block;
+                max-width: 100%;
+                background: #111214;
+                border: 1px solid #24252a;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.6);
+            }
+
+            .terminal-bar {
+                display: flex;
+                gap: 7px;
+                padding: 11px 14px;
+                background: #1a1b1e;
+                border-bottom: 1px solid #24252a;
+            }
+
+            .terminal-bar .dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                display: inline-block;
+            }
+
+            .dot.red {
+                background: #ff5f56;
+            }
+
+            .dot.yellow {
+                background: #ffbd2e;
+            }
+
+            .dot.green {
+                background: #27c93f;
+            }
+
+            .terminal-body {
+                padding: 18px 22px 20px;
+                font-family: "SFMono-Regular", Consolas, "Liberation Mono",
+                    Menlo, monospace;
+                font-size: 13.5px;
+                line-height: 1.9;
+                overflow-x: auto;
+                text-align: left;
+                width: max-content;
+                max-width: 100%;
+            }
+
+            .terminal-body .line {
+                color: #8a8a8a;
+                white-space: nowrap;
+            }
+
+            .terminal-body .line.output {
+                color: #d8d8d8;
+                padding-left: 18px;
+            }
+
+            .terminal-body .prompt {
+                color: #6ee7d8;
+                margin-right: 8px;
+            }
+
+            .terminal-body .cursor {
+                display: inline-block;
+                width: 7px;
+                height: 14px;
+                margin-left: 8px;
+                background: #d8d8d8;
+                vertical-align: text-bottom;
+                animation: blink 1s steps(1) infinite;
+            }
+
+            @keyframes blink {
+                0%,
+                49% {
+                    opacity: 1;
+                }
+                50%,
+                100% {
+                    opacity: 0;
+                }
+            }
+
+            /* Tech */
+
+            .stack-groups {
+                margin-top: 24px;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .stack-group {
+                display: flex;
+                align-items: baseline;
+                gap: 16px;
+                flex-wrap: wrap;
+            }
+
+            .stack-label {
+                flex: 0 0 110px;
+                font-size: 13px;
+                color: #666;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+
+            .pills {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                flex: 1;
+            }
+
+            .pill {
+                padding: 5px 12px;
+                border: 1px solid #262626;
+                border-radius: 999px;
+                font-size: 13px;
+                color: #cfcfcf;
+                background: #131313;
+            }
+
             /* Interests */
 
             .interests {
@@ -129,6 +256,10 @@
 
             details.interest summary .label {
                 transition: color 0.25s ease;
+            }
+
+            details.tech summary .label {
+                color: #7dd3fc;
             }
 
             details.travel summary .label {
@@ -356,6 +487,16 @@
                 details.interest summary {
                     font-size: 19px;
                 }
+
+                .stack-group {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 8px;
+                }
+
+                .stack-label {
+                    flex-basis: auto;
+                }
             }
         </style>
     </head>
@@ -372,8 +513,7 @@
                 </p>
 
                 <p class="bio">
-                    I build backend platforms, event-driven systems, workflow
-                    engines and AI-powered developer tools!
+                    Engineer by profession, curious by default.
                 </p>
 
                 <nav class="links">
@@ -384,10 +524,87 @@
                         rel="noopener"
                         >Resume</a
                     >
+                     <a href="https://in.linkedin.com/in/naren-chandra-c">LinkedIn</a>
                 </nav>
             </header>
 
             <section class="interests">
+                <details class="interest tech">
+                    <summary>
+                        <span class="label">Tech</span>
+                        <span class="arrow">→</span>
+                    </summary>
+
+                    <div class="interest-body">
+                        <div class="terminal" aria-hidden="true">
+                            <div class="terminal-bar">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="line">
+                                    <span class="prompt">$</span> whoami
+                                </div>
+                                <div class="line output">
+                                    blr\naren_chandra
+                                </div>
+                                <div class="line">
+                                    <span class="prompt">$</span> cat
+                                    focus.txt
+                                </div>
+                                <div class="line output">
+                                    workflow engines · event-driven systems ·
+                                    ai-integrated financial platforms
+                                </div>
+                                <div class="line">
+                                    <span class="prompt">$</span>
+                                    <span class="cursor"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stack-groups">
+                            <div class="stack-group">
+                                <div class="stack-label">Languages</div>
+                                <div class="pills">
+                                    <span class="pill">Java</span>
+                                    <span class="pill">Python</span>
+                                    <span class="pill">TypeScript</span>
+                                    <span class="pill">Bash</span>
+                                </div>
+                            </div>
+                            <div class="stack-group">
+                                <div class="stack-label">Frameworks</div>
+                                <div class="pills">
+                                    <span class="pill">Spring Boot</span>
+                                    <span class="pill">Kafka</span>
+                                    <span class="pill">Redis</span>
+                                    <span class="pill">FastAPI</span>
+                                    <span class="pill">Angular</span>
+                                </div>
+                            </div>
+                            <div class="stack-group">
+                                <div class="stack-label">Cloud Native</div>
+                                <div class="pills">
+                                    <span class="pill">OpenShift</span>
+                                    <span class="pill">Kubernetes</span>
+                                    <span class="pill">Helm</span>
+                                </div>
+                            </div>
+                            <div class="stack-group">
+                                <div class="stack-label">Architecture</div>
+                                <div class="pills">
+                                    <span class="pill">Event-Driven</span>
+                                    <span class="pill">Microservices</span>
+                                    <span class="pill">REST APIs</span>
+                                    <span class="pill">CI/CD</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
                 <details class="interest travel">
                     <summary>
                         <span class="label">Travel</span>
