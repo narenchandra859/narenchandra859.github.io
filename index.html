@@ -1,93 +1,640 @@
-<!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Naren Chandra</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Naren Chandra</title>
+        <meta
+            name="description"
+            content="Naren Chandra — Assistant Vice President at Citi. Backend platforms, event-driven systems, workflow engines and AI-powered developer tools."
+        />
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="#" class="image avatar"><img src="./images/avatar.JPG" alt="" /></a>
-					<h1>Hey, I'm <strong>Naren Chandra!</strong></h1>
-				</div>
-			</header>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
 
-		<!-- Main -->
-			<div id="main">
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2>About me</h2>
-						</header>
-						<h4><p align="justify">I'm a full stack Software Engineer currently working at Citi out of Bangalore, India. The majority of my work focuses on building Microservices using Java and Spring Boot. I also work with Angular to create micro frontends.
-							<br>Previously worked at JP Morgan Chase & Co. as a backend Software Engineer, and Samsung R&D as a PRISM research intern developing lightweight video classification models that can run on mobile.
-							<br>I graduated 2021 from Ramaiah Institute of Technology, Bangalore.  Here is my <a href="https://drive.google.com/file/d/1hX_EtWkOq9f9tZNEu33tTQOpW7HZsCa1/view?usp=drivesdk">Resume</a> and my <a href="https://www.linkedin.com/in/naren-chandra-26a87b1a6/">LinkedIn.</a></p></h4>
-					</section>
-				<!
-				<!-- Two -->
-					<section id="two">
-						<h2>Cool Stuff I've Worked</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<h3>BelieVid (SIH 2020)</h3>
-								<p>The one stop shop for all Video and Image forensics. Deepfake video detection, fake image detection, forensic
-								image analysis, and much more.<strong> Won 1st place at Smart India Hackathon 2020.</strong></p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<h3>ActionBot (Unisys Cloud Innovation)</h3>
-								<p>An AI chatbot that can do stuff for you. Built using the open source RASA framework.
-								 <strong>Won 1st Runners Up Prize at Unisys Cloud Y11.</strong></p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<h3>PHD Scholar Website</h3>
-								<p>MERN Stack Website to help the PHD students and Guides at Dept. Of CSE, RIT.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<h3>TI-GAN (Mini-Project)</h3>
-								<p>A Generative Adversarial Network that takes in a textual description of a face and gives out a high resolution image.
-									Also allows you to edit the features of the generated face. Built on AttnGAN with CelebA and StyleGAN.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<h3>Other Projects</h3>
-								<p>Physical Traffic Model with Smart Sensing Traffic Lights for a Robo RIT competition.</p>
-								<p>Worked with deploying docker images to the cloud, and docker in general.</p>
-								<p>Some Spring Boot experience and also deployed it on cloud using Pivotals Cloud Platform</p>
-								<p></p><br>
-							</article>
-						</div>
-					</section>
-			</div>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/naren-chandra-26a87b1a6/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/narenchandra859" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="mailto:narenchandra859@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Naren Chandra</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+            html {
+                scroll-behavior: smooth;
+            }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+            body {
+                background: #0a0a0a;
+                color: #f2f2f2;
+                font-family: "Inter", sans-serif;
+                line-height: 1.6;
+                -webkit-font-smoothing: antialiased;
+            }
 
-	</body>
+            .container {
+                width: min(720px, 90%);
+                margin: auto;
+                padding: 100px 0 60px;
+            }
+
+            /* Header */
+
+            .name {
+                font-size: 44px;
+                font-weight: 800;
+                letter-spacing: -0.02em;
+            }
+
+            .location {
+                margin-top: 14px;
+                font-size: 18px;
+                color: #b7b7b7;
+            }
+
+            .current-role {
+                margin-top: 4px;
+                font-size: 15px;
+                color: #7a7a7a;
+            }
+
+            .current-role abbr {
+                text-decoration: none;
+                border-bottom: 1px dotted #555;
+                cursor: help;
+            }
+
+            .bio {
+                margin-top: 28px;
+                font-size: 18px;
+                color: #d8d8d8;
+                max-width: 560px;
+            }
+
+            .links {
+                margin-top: 28px;
+                display: flex;
+                gap: 22px;
+                flex-wrap: wrap;
+            }
+
+            .links a {
+                color: #9a9a9a;
+                text-decoration: none;
+                font-size: 15px;
+                font-weight: 500;
+                border-bottom: 1px solid transparent;
+                transition: color 0.2s, border-color 0.2s;
+            }
+
+            .links a:hover {
+                color: #f2f2f2;
+                border-color: #444;
+            }
+
+            /* Interests */
+
+            .interests {
+                margin-top: 80px;
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            details.interest {
+                border-top: 1px solid #1e1e1e;
+            }
+
+            details.interest:last-child {
+                border-bottom: 1px solid #1e1e1e;
+            }
+
+            details.interest summary {
+                list-style: none;
+                cursor: pointer;
+                padding: 26px 2px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 22px;
+                font-weight: 700;
+                user-select: none;
+            }
+
+            details.interest summary::-webkit-details-marker {
+                display: none;
+            }
+
+            details.interest summary .label {
+                transition: color 0.25s ease;
+            }
+
+            details.travel summary .label {
+                color: #6ee7d8;
+            }
+
+            details.reading summary .label {
+                color: #b9a3ff;
+            }
+
+            details.watches summary .label {
+                color: #ffcf8a;
+            }
+
+            details.interest summary .arrow {
+                font-weight: 400;
+                color: #666;
+                transition: transform 0.25s ease, color 0.25s ease;
+                font-size: 20px;
+            }
+
+            details.interest[open] summary .arrow {
+                transform: rotate(90deg);
+                color: #f2f2f2;
+            }
+
+            details.interest summary:hover .arrow {
+                color: #f2f2f2;
+            }
+
+            .interest-body {
+                padding: 4px 2px 34px;
+                animation: reveal 0.35s ease;
+            }
+
+            @keyframes reveal {
+                from {
+                    opacity: 0;
+                    transform: translateY(-6px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Travel */
+
+            .trip {
+                margin-bottom: 30px;
+            }
+
+            .trip:last-child {
+                margin-bottom: 0;
+            }
+
+            .trip-heading {
+                font-size: 14px;
+                font-weight: 600;
+                color: #9a9a9a;
+                text-transform: uppercase;
+                letter-spacing: 0.06em;
+                margin-bottom: 12px;
+            }
+
+            .trip-heading .flag {
+                margin-right: 8px;
+            }
+
+            .trip-heading .year {
+                color: #555;
+                font-weight: 400;
+            }
+
+            .photo-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 10px;
+            }
+
+            .photo {
+                position: relative;
+                aspect-ratio: 1 / 1;
+                border-radius: 10px;
+                overflow: hidden;
+                cursor: zoom-in;
+                background: #151515;
+            }
+
+            .photo img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                transition: transform 0.4s ease;
+            }
+
+            .photo:hover img {
+                transform: scale(1.08);
+            }
+
+            .photo .caption {
+                position: absolute;
+                inset: auto 0 0 0;
+                padding: 18px 10px 8px;
+                font-size: 12px;
+                color: #fff;
+                background: linear-gradient(
+                    to top,
+                    rgba(0, 0, 0, 0.75),
+                    transparent
+                );
+                opacity: 0;
+                transition: opacity 0.25s ease;
+            }
+
+            .photo:hover .caption {
+                opacity: 1;
+            }
+
+            /* Reading */
+
+            .book {
+                display: flex;
+                gap: 22px;
+                align-items: center;
+            }
+
+            .book-spine {
+                flex-shrink: 0;
+                width: 64px;
+                height: 96px;
+                border-radius: 4px;
+                background: linear-gradient(160deg, #7c5cff, #2a1f66);
+                box-shadow: inset -6px 0 10px rgba(0, 0, 0, 0.35);
+                position: relative;
+            }
+
+            .book-spine::after {
+                content: "";
+                position: absolute;
+                inset: 10px 6px;
+                border-top: 1px solid rgba(255, 255, 255, 0.25);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+            }
+
+            .book-info .title {
+                font-size: 17px;
+                font-weight: 600;
+                color: #f2f2f2;
+            }
+
+            .book-info .author {
+                margin-top: 4px;
+                font-size: 14px;
+                color: #8a8a8a;
+            }
+
+            .book-info .note {
+                margin-top: 10px;
+                font-size: 14px;
+                color: #999;
+                max-width: 420px;
+            }
+
+            /* Lightbox */
+
+            .lightbox {
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.9);
+                display: none;
+                align-items: center;
+                justify-content: center;
+                z-index: 100;
+                padding: 40px;
+                cursor: zoom-out;
+            }
+
+            .lightbox.open {
+                display: flex;
+            }
+
+            .lightbox img {
+                max-width: 100%;
+                max-height: 100%;
+                border-radius: 8px;
+            }
+
+            .lightbox .lightbox-caption {
+                position: absolute;
+                bottom: 30px;
+                left: 0;
+                right: 0;
+                text-align: center;
+                color: #ccc;
+                font-size: 14px;
+            }
+
+            footer {
+                margin-top: 90px;
+                padding-top: 30px;
+                border-top: 1px solid #1e1e1e;
+                color: #555;
+                font-size: 13px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            @media (max-width: 600px) {
+                .container {
+                    padding: 60px 0 40px;
+                }
+
+                .name {
+                    font-size: 34px;
+                }
+
+                .bio {
+                    font-size: 16px;
+                }
+
+                details.interest summary {
+                    font-size: 19px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <h1 class="name">Naren Chandra</h1>
+                <p class="location">Bangalore, India.</p>
+                <p class="current-role">
+                    Currently
+                    <abbr title="Assistant Vice President">AVP</abbr>
+                    @ Citi
+                </p>
+
+                <p class="bio">
+                    I build backend platforms, event-driven systems, workflow
+                    engines and AI-powered developer tools!
+                </p>
+
+                <nav class="links">
+                    <a href="https://github.com/narenchandra859">GitHub</a>
+                    <a
+                        href="https://drive.google.com/file/d/1zjXm44DY1SLcTPxvPszUumNDlgsLyVtI/view?usp=sharing"
+                        target="_blank"
+                        rel="noopener"
+                        >Resume</a
+                    >
+                </nav>
+            </header>
+
+            <section class="interests">
+                <details class="interest travel">
+                    <summary>
+                        <span class="label">Travel</span>
+                        <span class="arrow">→</span>
+                    </summary>
+
+                    <div class="interest-body">
+                        <div class="trip">
+                            <div class="trip-heading">
+                                <span class="flag">🇹🇼</span>Taiwan
+                                <span class="year">— 2025</span>
+                            </div>
+                            <div class="photo-grid">
+                                <figure class="photo" data-caption="Jiufen Old Street">
+                                    <img src="travel_imgs/2025_taiwan_jiufen_shifen_spirited_away.jpg" alt="Jiufen Old Street, Taiwan" loading="lazy" />
+                                    <figcaption class="caption">Jiufen Old Street</figcaption>
+                                </figure>
+                                <figure class="photo" data-caption="Shifen">
+                                    <img src="travel_imgs/2025_taiwan_jiufen_shifen.jpg" alt="Shifen, Taiwan" loading="lazy" />
+                                    <figcaption class="caption">Shifen</figcaption>
+                                </figure>
+                                <figure class="photo" data-caption="Shifen Waterfall">
+                                    <img src="travel_imgs/2025_taiwan_shifen_waterfall.jpg" alt="Shifen Waterfall, Taiwan" loading="lazy" />
+                                    <figcaption class="caption">Shifen Waterfall</figcaption>
+                                </figure>
+                                <figure class="photo" data-caption="Tiaoxi River">
+                                    <img src="travel_imgs/2025_taiwan_tiaoshi_scenic.jpg" alt="Tiaoxi River, Taiwan" loading="lazy" />
+                                    <figcaption class="caption">Tiaoxi River</figcaption>
+                                </figure>
+                                <figure class="photo" data-caption="Capybara Café">
+                                    <img src="travel_imgs/2025_taiwan_CAPY_LOVE.jpg" alt="Capybara Café, Taiwan" loading="lazy" />
+                                    <figcaption class="caption">Capybara Café</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="trip">
+                            <div class="trip-heading">
+                                <span class="flag">🇮🇩</span>Bali
+                                <span class="year">— 2025</span>
+                            </div>
+                            <div class="photo-grid">
+                                <figure class="photo" data-caption="Tanah Lot Temple">
+                                    <img src="travel_imgs/bali_2025_tanah_lot.jpg" alt="Tanah Lot Temple, Bali" loading="lazy" />
+                                    <figcaption class="caption">Tanah Lot Temple</figcaption>
+                                </figure>
+                                <figure class="photo" data-caption="Beach Cat">
+                                    <img src="travel_imgs/bali_2025_beach_cat.jpg" alt="Beach cat, Bali" loading="lazy" />
+                                    <figcaption class="caption">Beach Cat</figcaption>
+                                </figure>
+                                <figure class="photo" data-caption="New Friend">
+                                    <img src="travel_imgs/bali_2025_with_dog.jpg" alt="With a dog, Bali" loading="lazy" />
+                                    <figcaption class="caption">New Friend</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="trip">
+                            <div class="trip-heading">
+                                <span class="flag">🇲🇾</span>Malaysia
+                                <span class="year">— 2025</span>
+                            </div>
+                            <div class="photo-grid">
+                                <figure class="photo" data-caption="Petronas Towers">
+                                    <img src="travel_imgs/malaysia_2025_petronas.jpg" alt="Petronas Towers, Malaysia" loading="lazy" />
+                                    <figcaption class="caption">Petronas Towers</figcaption>
+                                </figure>
+                                <figure class="photo" data-caption="Batu Caves">
+                                    <img src="travel_imgs/malaysia_2025_batu_cave.jpg" alt="Batu Caves, Malaysia" loading="lazy" />
+                                    <figcaption class="caption">Batu Caves</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="trip">
+                            <div class="trip-heading">
+                                <span class="flag">🇸🇬</span>Singapore
+                                <span class="year">— 2024</span>
+                            </div>
+                            <div class="photo-grid">
+                                <figure class="photo" data-caption="Marina Bay at Night">
+                                    <img src="travel_imgs/singapore_2024_marina_bay_night_picture.jpg" alt="Marina Bay at night, Singapore" loading="lazy" />
+                                    <figcaption class="caption">Marina Bay at Night</figcaption>
+                                </figure>
+                                <figure class="photo" data-caption="Gardens by the Bay">
+                                    <img src="travel_imgs/singapore_2024_gardens.jpg" alt="Gardens by the Bay, Singapore" loading="lazy" />
+                                    <figcaption class="caption">Gardens by the Bay</figcaption>
+                                </figure>
+                                <figure class="photo" data-caption="City Skyline">
+                                    <img src="travel_imgs/singapore_2024_scenic.jpg" alt="City skyline, Singapore" loading="lazy" />
+                                    <figcaption class="caption">City Skyline</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="trip">
+                            <div class="trip-heading">
+                                <span class="flag">🇹🇭</span>Thailand
+                                <span class="year">— 2024</span>
+                            </div>
+                            <div class="photo-grid">
+                                <figure class="photo" data-caption="Ang Thong, Koh Samui">
+                                    <img src="travel_imgs/thailand_koh_samui_2024_ang_thong_mountaintop.jpg" alt="Ang Thong, Koh Samui, Thailand" loading="lazy" />
+                                    <figcaption class="caption">Ang Thong, Koh Samui</figcaption>
+                                </figure>
+                                <figure class="photo" data-caption="Jet Skiing">
+                                    <img src="travel_imgs/thailand_2024_jetski.jpg" alt="Jet skiing, Thailand" loading="lazy" />
+                                    <figcaption class="caption">Jet Skiing</figcaption>
+                                </figure>
+                                <figure class="photo" data-caption="Shiba Café">
+                                    <img src="travel_imgs/thailand_2024_shiba_cafe.jpg" alt="Shiba café, Thailand" loading="lazy" />
+                                    <figcaption class="caption">Shiba Café</figcaption>
+                                </figure>
+                                <figure class="photo" data-caption="Scenic Thailand">
+                                    <img src="travel_imgs/thailand_2024_scenic.jpg" alt="Scenic Thailand" loading="lazy" />
+                                    <figcaption class="caption">Scenic Thailand</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="trip">
+                            <div class="trip-heading">
+                                <span class="flag">🇻🇳</span>Vietnam
+                                <span class="year">— 2023</span>
+                            </div>
+                            <div class="photo-grid">
+                                <figure class="photo" data-caption="Cat Ba Mountaintop">
+                                    <img src="travel_imgs/vietnam_2023_catba_mountaintop.jpg" alt="Cat Ba Mountaintop, Vietnam" loading="lazy" />
+                                    <figcaption class="caption">Cat Ba Mountaintop</figcaption>
+                                </figure>
+                                <figure class="photo" data-caption="Vietnam">
+                                    <img src="travel_imgs/vietnam_2023.jpg" alt="Vietnam" loading="lazy" />
+                                    <figcaption class="caption">Vietnam</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="interest reading">
+                    <summary>
+                        <span class="label">Reading</span>
+                        <span class="arrow">→</span>
+                    </summary>
+
+                    <div class="interest-body">
+                        <div class="book">
+                            <div class="book-spine" aria-hidden="true"></div>
+                            <div class="book-info">
+                                <div class="title">
+                                    Remembrance of Earth's Past Trilogy
+                                </div>
+                                <div class="author">Liu Cixin</div>
+                                <p class="note">
+                                    The Three-Body Problem, The Dark Forest and
+                                    Death's End — hard sci-fi that reframes
+                                    everything from distributed systems to the
+                                    Fermi Paradox.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="interest watches">
+                    <summary>
+                        <span class="label">Watches</span>
+                        <span class="arrow">→</span>
+                    </summary>
+
+                    <div class="interest-body">
+                        <div class="trip">
+                            <div class="trip-heading">
+                                <span class="flag">⌚</span>Seiko Flieger
+                                SRPH33K1
+                            </div>
+                            <div class="photo-grid">
+                                <figure class="photo" data-caption="Seiko Flieger SRPH33K1 — Original Band">
+                                    <img src="watches/Seiko_fleiger_SRPH33K1_original_band.jpg" alt="Seiko Flieger SRPH33K1 with original band" loading="lazy" />
+                                    <figcaption class="caption">Original Band</figcaption>
+                                </figure>
+                                <figure class="photo" data-caption="Seiko Flieger SRPH33K1 — Orange Band">
+                                    <img src="watches/Seiko_fleiger_SRPH33K1_new_orange_band.jpg" alt="Seiko Flieger SRPH33K1 with orange band" loading="lazy" />
+                                    <figcaption class="caption">Orange Band</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="trip">
+                            <div class="trip-heading">
+                                <span class="flag">⌚</span>Casio Vintage
+                            </div>
+                            <div class="photo-grid">
+                                <figure class="photo" data-caption="Casio Vintage A168XES-1BDF">
+                                    <img src="watches/casio_vintage_a168xes_1bdf.jpg" alt="Casio Vintage A168XES-1BDF" loading="lazy" />
+                                    <figcaption class="caption">A168XES-1BDF</figcaption>
+                                </figure>
+                                <figure class="photo" data-caption="Casio Vintage AQ-240E-3A">
+                                    <img src="watches/casio_vintage_aq_240e_3a.jpg" alt="Casio Vintage AQ-240E-3A" loading="lazy" />
+                                    <figcaption class="caption">AQ-240E-3A</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </section>
+
+            <footer>
+                <span>© 2026 Naren Chandra</span>
+                <span>Bangalore, India</span>
+            </footer>
+        </div>
+
+        <div class="lightbox" id="lightbox">
+            <img id="lightbox-img" src="" alt="" />
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+
+        <script>
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            const lightboxCaption = document.getElementById(
+                "lightbox-caption",
+            );
+
+            document.querySelectorAll(".photo").forEach((figure) => {
+                figure.addEventListener("click", () => {
+                    const img = figure.querySelector("img");
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt;
+                    lightboxCaption.textContent =
+                        figure.dataset.caption || "";
+                    lightbox.classList.add("open");
+                });
+            });
+
+            lightbox.addEventListener("click", () => {
+                lightbox.classList.remove("open");
+                lightboxImg.src = "";
+            });
+
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape") {
+                    lightbox.classList.remove("open");
+                    lightboxImg.src = "";
+                }
+            });
+        </script>
+    </body>
 </html>
