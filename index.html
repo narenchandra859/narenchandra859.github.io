@@ -459,6 +459,149 @@
                 font-size: 14px;
             }
 
+            /* Seal corner */
+
+            .seal-hint {
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+                color: #555;
+                cursor: pointer;
+                background: none;
+                border: none;
+                font: inherit;
+                font-size: 13px;
+                padding: 0;
+                opacity: 0;
+                transform: translateY(6px);
+                transition: opacity 0.6s ease, transform 0.6s ease,
+                    color 0.2s ease;
+            }
+
+            .seal-hint.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .seal-hint:hover,
+            .seal-hint:focus-visible {
+                color: #d8d8d8;
+            }
+
+            .seal-peek {
+                position: absolute;
+                right: -4px;
+                bottom: 20px;
+                width: 46px;
+                height: auto;
+                opacity: 0;
+                transform: translateY(10px) scale(0.85) rotate(-4deg);
+                transition: opacity 0.25s ease, transform 0.25s ease;
+                pointer-events: none;
+                filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+            }
+
+            .seal-hint:hover .seal-peek,
+            .seal-hint:focus-visible .seal-peek {
+                opacity: 1;
+                transform: translateY(-4px) scale(1) rotate(0deg);
+            }
+
+            .seal-panel {
+                position: fixed;
+                right: 20px;
+                bottom: 84px;
+                width: min(360px, calc(100vw - 40px));
+                max-height: 70vh;
+                overflow-y: auto;
+                background: #111;
+                border: 1px solid #232323;
+                border-radius: 12px;
+                padding: 20px;
+                z-index: 49;
+                opacity: 0;
+                transform: translateY(12px);
+                pointer-events: none;
+                transition: opacity 0.2s, transform 0.2s;
+            }
+
+            .seal-panel::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: url("seal/seal_transparent.png");
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 180px;
+                opacity: 0.15;
+                z-index: -1;
+                border-radius: inherit;
+            }
+
+            .seal-panel.open {
+                opacity: 1;
+                transform: translateY(0);
+                pointer-events: auto;
+            }
+
+            .seal-panel .seal-intro {
+                font-size: 13px;
+                color: #8a8a8a;
+                margin-bottom: 16px;
+            }
+
+            .seal-panel h3 {
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                color: #6ee7d8;
+                margin-bottom: 10px;
+            }
+
+            .seal-panel h3:not(:first-of-type) {
+                margin-top: 22px;
+            }
+
+            .seal-list {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .seal-list li {
+                font-size: 13px;
+                color: #b7b7b7;
+                line-height: 1.5;
+            }
+
+            .seal-list a {
+                color: #d8d8d8;
+                font-weight: 600;
+                text-decoration: none;
+                border-bottom: 1px solid transparent;
+            }
+
+            .seal-list a:hover {
+                color: #6ee7d8;
+                border-color: #6ee7d8;
+            }
+
+            .seal-list .extra-link {
+                color: #7a7a7a;
+                font-size: 12px;
+                font-weight: 400;
+            }
+
+            @media (max-width: 600px) {
+                .seal-panel {
+                    right: 14px;
+                    left: 14px;
+                    width: auto;
+                    bottom: 20px;
+                }
+            }
+
             footer {
                 margin-top: 90px;
                 padding-top: 30px;
@@ -832,9 +975,22 @@
                 </details>
             </section>
 
-            <footer>
+            <footer id="footer">
                 <span>© 2026 Naren Chandra</span>
                 <span>Bangalore, India</span>
+                <button
+                    class="seal-hint"
+                    id="seal-hint"
+                    aria-label="Open seal corner"
+                    aria-expanded="false"
+                >
+                    ps. curious?
+                    <img
+                        class="seal-peek"
+                        src="seal/seal_transparent.png"
+                        alt=""
+                    />
+                </button>
             </footer>
         </div>
 
@@ -842,6 +998,112 @@
             <img id="lightbox-img" src="" alt="" />
             <div class="lightbox-caption" id="lightbox-caption"></div>
         </div>
+
+        <div class="seal-panel" id="seal-panel">
+            <p class="seal-intro">a hidden corner for my seal obsession 🦭</p>
+
+            <h3>Content Creators</h3>
+            <ul class="seal-list">
+                <li>
+                    <a href="https://www.instagram.com/chiho_pic_seal/" target="_blank" rel="noopener">@chiho_pic_seal</a>
+                    — Arare's (Kaiyukan Aquarium) #1 fan. Also has a
+                    <a class="extra-link" href="https://www.youtube.com/@chiho_seal_channel6295" target="_blank" rel="noopener">YouTube</a>
+                    with really calming videos.
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@mihoharpseal" target="_blank" rel="noopener">miho harpseal</a>
+                    — lots of seal videos with English subs. Also on
+                    <a class="extra-link" href="https://www.instagram.com/miho_harpseal/" target="_blank" rel="noopener">Instagram</a>.
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/miss_seaal/" target="_blank" rel="noopener">@miss_seaal</a>
+                    — artist who illustrates cute seals! Love their work.
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/hakuhime_az/" target="_blank" rel="noopener">@hakuhime_az</a>
+                    — seal photos/videos from aquariums across Japan.
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/michaelboyyd/" target="_blank" rel="noopener">@michaelboyyd</a>
+                    — underwater seal content, some really lovely encounters.
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/miwa.x.azarashi/" target="_blank" rel="noopener">@miwa.x.azarashi</a>
+                    — seal photos, mostly from Kaiyukan.
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/seals_otters/" target="_blank" rel="noopener">@seals_otters</a>
+                    — Baikal seal content!
+                </li>
+            </ul>
+
+            <h3>Rescue Centers / Rehabs</h3>
+            <ul class="seal-list">
+                <li>
+                    <a href="https://www.instagram.com/tokkaricenter_official/" target="_blank" rel="noopener">@tokkaricenter_official</a>
+                    — home of Ponsuke & Yo. Aquatic zoo and seal hospital in Mombetsu, Japan.
+                    <a class="extra-link" href="https://o-tower.co.jp/tokkaricenter2.html" target="_blank" rel="noopener">More info (JP)</a>.
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/aguhiyori/" target="_blank" rel="noopener">@aguhiyori</a>
+                    — everyone's favorite seal Agu, plus Hiyori & Kyoro, right beside the Tokkari Center.
+                    <a class="extra-link" href="https://www.youtube.com/@user-eb1yg2gy6w" target="_blank" rel="noopener">YouTube</a>.
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/marinemammalrescue/" target="_blank" rel="noopener">@marinemammalrescue</a>
+                    — BC Marine Mammal Rescue Society (Canada). Even has cute
+                    <a class="extra-link" href="https://www.twitch.tv/marinemammalrescue" target="_blank" rel="noopener">otter livestreams</a>.
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/sealrescueireland/" target="_blank" rel="noopener">@sealrescueireland</a>
+                    — rehab center in Ireland with tons of educational content.
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/cornishsealsanctuary/" target="_blank" rel="noopener">@cornishsealsanctuary</a>
+                    — seal & sea lion rescue center in the UK.
+                </li>
+            </ul>
+        </div>
+
+        <script>
+            const sealToggle = document.getElementById("seal-hint");
+            const sealPanel = document.getElementById("seal-panel");
+
+            const sealObserver = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            sealToggle.classList.add("visible");
+                        }
+                    });
+                },
+                { threshold: 0.6 },
+            );
+            sealObserver.observe(sealToggle);
+
+            sealToggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                const isOpen = sealPanel.classList.toggle("open");
+                sealToggle.setAttribute("aria-expanded", String(isOpen));
+            });
+
+            document.addEventListener("click", (e) => {
+                if (
+                    !sealPanel.contains(e.target) &&
+                    !sealToggle.contains(e.target)
+                ) {
+                    sealPanel.classList.remove("open");
+                    sealToggle.setAttribute("aria-expanded", "false");
+                }
+            });
+
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape") {
+                    sealPanel.classList.remove("open");
+                    sealToggle.setAttribute("aria-expanded", "false");
+                }
+            });
+        </script>
 
         <script>
             const lightbox = document.getElementById("lightbox");
